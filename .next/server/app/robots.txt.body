@@ -1,6 +1,0 @@
-User-Agent: *
-Allow: /
-Disallow: /api/
-Disallow: /_next/
-
-Sitemap: https://hirushauto7640.builtwithrocket.new/sitemap.xml
