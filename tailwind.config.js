@@ -32,7 +32,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        coda: ['Coda', 'cursive', 'sans-serif'],
+        coda: ['var(--font-coda)', 'cursive', 'sans-serif'],
         arial: ['Arial', 'Helvetica', 'sans-serif'],
       },
       fontSize: {

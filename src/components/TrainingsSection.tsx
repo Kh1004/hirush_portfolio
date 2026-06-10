@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+import AnimateOnScroll from '@/components/AnimateOnScroll';
 
 interface Training {
   title: string;
@@ -11,45 +11,45 @@ interface Training {
 
 const trainings: Training[] = [
   {
-    title: 'PLC Programming Fundamentals',
+    title: 'Electrical Design Fundamentals',
     level: 'Beginner',
     duration: '4 Weeks',
     description:
-      'Learn the basics of PLC programming including ladder logic, function blocks, and structured text programming.',
+      'Comprehensive training in electrical design covering component selection, protection calculations, operating methods, and core electrical concepts for beginners.',
     topics: [
-      'Introduction to PLCs',
-      'Ladder Logic Programming',
-      'Input/Output Configuration',
-      'Timer & Counter Instructions',
-      'Troubleshooting Basics',
+      'Component Selection (Switches, Relays, Breakers)',
+      'Protection Calculation Methods',
+      'Operating Methods & Principles',
+      'Conceptual Understanding of Circuits',
+      'Basic to Complex Control Systems',
     ],
   },
   {
-    title: 'HMI & SCADA Design',
+    title: 'PLC Programming Training',
     level: 'Intermediate',
     duration: '6 Weeks',
     description:
-      'Master HMI screen design and SCADA system development for industrial process monitoring and control.',
+      'From basic PLC concepts to advanced programming techniques including ladder logic, function block diagrams, structured text, and hands-on projects.',
     topics: [
-      'HMI Screen Design Principles',
-      'Tag Configuration & Binding',
-      'Alarm Management',
-      'Trending & Reporting',
-      'OPC Communication',
+      'PLC Architecture & Basic Concepts',
+      'Ladder Logic & Function Block Diagrams',
+      'Structured Text Programming',
+      'PID Control & Motion Control',
+      'Hands-On Project Work',
     ],
   },
   {
-    title: 'Advanced Automation Engineering',
-    level: 'Advanced',
-    duration: '8 Weeks',
+    title: 'HMI/SCADA Development',
+    level: 'Intermediate',
+    duration: '6 Weeks',
     description:
-      'Advanced course covering complex automation systems, network integration, and industrial communication protocols.',
+      'Master HMI screen design and SCADA system development including configuration, data acquisition, trending, alarm handling, and real-world applications.',
     topics: [
-      'Industrial Networks (Profibus, Profinet)',
-      'Motion Control Systems',
-      'Safety PLC Programming',
-      'System Integration',
-      'Project Management',
+      'Introduction to HMI/SCADA Systems',
+      'User-Friendly HMI Screen Design',
+      'SCADA Configuration & Data Acquisition',
+      'Trending & Alarm Handling',
+      'Real-World Case Studies & Projects',
     ],
   },
 ];
@@ -57,12 +57,12 @@ const trainings: Training[] = [
 const levelColors: Record<string, string> = {
   Beginner: '#27ae60',
   Intermediate: '#e67e22',
-  Advanced: '#B81005',
 };
 
 export default function TrainingsSection() {
   return (
     <section id="trainings" className="bg-white py-12">
+      <AnimateOnScroll>
       <div className="max-w-[1180px] mx-auto px-6 md:px-[50px]">
         <h2
           className="font-coda text-[30px] font-normal text-center uppercase mb-2 leading-[1.25]"
@@ -70,7 +70,7 @@ export default function TrainingsSection() {
         >
           Training Programs
         </h2>
-        <p className="text-center text-[#AAAAAA] text-[14px] mb-8">
+        <p className="text-center text-[#777777] text-[14px] mb-8">
           Online and in-person classes to advance your automation engineering skills
         </p>
 
@@ -93,7 +93,7 @@ export default function TrainingsSection() {
                   >
                     {training.level}
                   </span>
-                  <span className="text-[12px] text-[#AAAAAA]">{training.duration}</span>
+                  <span className="text-[12px] text-[#777777]">{training.duration}</span>
                 </div>
                 <h3
                   className="font-coda text-[17px] font-normal leading-[1.25] group-hover:text-[#B81005] transition-colors duration-300"
@@ -127,11 +127,9 @@ export default function TrainingsSection() {
               {/* Card footer */}
               <div className="px-4 pb-4">
                 <a
-                  href="#portal"
-                  className="block text-center text-[13px] uppercase py-2 px-4 text-white transition-colors duration-200"
+                  href="#contact"
+                  className="block text-center text-[13px] uppercase py-2 px-4 text-white transition-colors duration-200 hover:bg-[#940D05]"
                   style={{ background: '#B81005' }}
-                  onMouseEnter={(e) => (e.currentTarget.style.background = '#940D05')}
-                  onMouseLeave={(e) => (e.currentTarget.style.background = '#B81005')}
                 >
                   Enroll Now
                 </a>
@@ -140,6 +138,7 @@ export default function TrainingsSection() {
           ))}
         </div>
       </div>
+      </AnimateOnScroll>
     </section>
   );
 }

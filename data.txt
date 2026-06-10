@@ -1,0 +1,108 @@
+
+
+
+ABOUT US
+Hirush Automation Pte Ltd was established in Singapore as a distinguished Electrical, Control, and Automation Company under the visionary leadership of R. Amulyan. Mr. Amulyan's profound professionalism, extensive expertise, unwavering work ethic, and over a decade of invaluable experience have played a pivotal role in shaping the company's esteemed reputation.
+In addition to our presence in Singapore, Hirush Automation Pvt Ltd in Sri Lanka also contributes significantly to our success. Our expansion into Sri Lanka has been driven by the same commitment to excellence in Electrical, Control, and Automation services.
+Both our Singapore and Sri Lanka offices have diligently cultivated teams of highly skilled engineers who are wholly committed to providing solutions that consistently surpass customer expectations. Hirush Automation's impressive growth can be attributed to our steadfast dedication to delivering top-tier work and ensuring the utmost satisfaction of our clients.
+At the core of our business model lies our proficiency in the design, implementation, testing, commissioning, and maintenance of PLC/HMI/SCADA systems and Electrical/Control panels. We specialize in delivering tailored services and have successfully executed numerous projects, solidifying our reputation as leaders in the industry, both in Singapore and Sri Lanka
+
+MISSION
+Our company's mission is to deliver superior quality control and automation systems, paired with exceptional customer service, by relentlessly pursuing innovation and leveraging advanced technology
+
+VISION
+To establish ourselves as one of the leading system integrators and process control automation companies in Singapore and Sri Lanka, committed to delivering exceptional quality services that consistently exceed the expectations of our esteemed customers
+
+
+
+
+
+CORE VALUE
+Customer-Centric Excellence: We hold our customers in the highest regard, treating them with immense respect and trust. Their satisfaction and success are at the forefront of our efforts.
+Innovation-Driven Growth: Our company thrives on creativity, invention, and innovation. We continuously seek new ways to improve and excel in the solutions we provide.
+Ethical Integrity: Honesty, integrity, and the highest ethical standards are ingrained in every aspect of our business. We are unwavering in our commitment to doing what is right, both for our customers and within our organization.
+
+Services 
+PLC Programming
+Our expertise lies in proposing a suitable PLC hardware configuration and delivering programming services that align precisely with the control system requirements specified in the contract and the designated control philosophy. We specialize in PLC programming across various brands, including Siemens, Schneider, Allen-Bradley, and Mitsubishi
+
+HMI/SCADA Design
+We offer SCADA software and communication configuration solutions in consultation with our clients, tailored to meet the contractual requirements and specifications. Our engineering services extend to the development of Human Machine Interface (HMI) graphics, characterized by their robustness, effectiveness, visual appeal, and user-friendliness. Our proficiency spans various brands, encompassing Siemens, Schneider, Allen-Bradley, and Mitsubishi, ensuring comprehensive support for diverse client needs
+
+ELECTRICAL AND CONTROL PANEL 
+Control panel design and fabrication constitute integral components of our distinct business offerings. We specialize in crafting high-quality electrical panels, expertly integrated with essential equipment such as drives, starters, and control systems. These panels are carefully outfitted with PLC systems, along with electrical control components, to facilitate precise control and monitoring functions. Moreover, we provide comprehensive drawing and documentation support, ensuring the seamless operation and maintenance of these critical systems.
+
+TRAINING
+We offer comprehensive training programs tailored for beginners in the field of electrical design. Our courses cover essential topics such as:
+Component Selection: We provide in-depth guidance on selecting the right electrical components, including switches, relays, circuit breakers, and more, to ensure optimal system performance and safety.
+Protection Calculation: Our training includes practical exercises in protection calculation methods, helping participants understand how to safeguard electrical systems against overloads and faults.
+Operating Methods: We educate beginners on the various operating methods and principles that underlie electrical systems, from basic circuits to complex control systems.
+Conceptual Understanding: We focus on building a strong foundational understanding of electrical concepts, ensuring that participants grasp the fundamental principles of electrical design.
+Our training programs are designed to empower beginners with the knowledge and skills necessary to excel in the field of electrical design, fostering a solid foundation for their future endeavors.
+
+In addition to our foundational training in electrical design, we also offer comprehensive training in PLC programming and HMI/SCADA development. Our programs are structured to take participants from basic concepts to the advanced skills required for potential project-level work. Here's an overview of what our PLC programming and HMI/SCADA development training entails:
+PLC Programming Training:
+Basic Concepts: We start with an introduction to PLCs, covering their architecture, programming languages, and basic functions.
+Programming Languages: Participants learn the fundamentals of ladder logic, function block diagrams, and structured text, gaining proficiency in writing and troubleshooting PLC code.
+Advanced Topics: We delve into advanced PLC programming techniques, including PID control, motion control, and data communication between PLCs.
+Hands-On Projects: Our training includes hands-on projects to apply the knowledge gained and develop practical skills.
+HMI/SCADA Development Training:
+Introduction to HMI/SCADA: We provide an overview of Human-Machine Interfaces (HMI) and Supervisory Control and Data Acquisition (SCADA) systems, explaining their role in industrial automation.
+HMI Development: Participants learn to create user-friendly and visually appealing HMI screens for controlling and monitoring industrial processes.
+SCADA Configuration: We cover SCADA configuration, data acquisition, trending, and alarm handling to enable participants to build robust SCADA systems.
+Real-World Applications: Our training includes real-world case studies and projects, allowing participants to apply their HMI/SCADA development skills.
+By offering comprehensive training in PLC programming and HMI/SCADA development, we empower participants to excel in the field of industrial automation, from understanding the basics to tackling complex projects with confidence.
+
+
+Controller Design 
+We specialize in designing customized electronics-based controllers tailored to meet specific customer requirements. Our expertise encompasses a wide range of controller types, including IoT controllers and monitoring controllers. Here's an overview of our capabilities in this area:
+1. IoT Controllers:
+Needs Assessment: We work closely with customers to understand their IoT control system requirements, including data collection, remote monitoring, and control objectives.
+Hardware Design: Our experienced engineers design hardware platforms that are optimized for IoT applications, incorporating connectivity options such as Wi-Fi, Bluetooth, cellular, and LoRa, depending on the project's needs.
+Firmware Development: We develop custom firmware to enable seamless communication between sensors, actuators, and the IoT platform. Security and data encryption are prioritized.
+Integration: We integrate the IoT controller with cloud platforms, enabling real-time data access and control through web and mobile applications.
+Testing and Validation: Rigorous testing and validation ensure the controller's reliability and performance under various conditions.
+Scalability: Our designs are scalable, allowing for future expansion and adaptation to changing IoT requirements.
+2. Monitoring Controllers:
+Requirement Analysis: We collaborate closely with customers to define the monitoring objectives and the parameters to be tracked.
+Sensor Integration: We select and integrate the appropriate sensors to monitor variables such as temperature, humidity, pressure, flow rates, or any other specific parameters.
+Data Acquisition: Our controllers are equipped with robust data acquisition systems to gather data from the sensors in real-time.
+User Interface: We design user-friendly interfaces for monitoring controllers, providing users with access to data and control functions.
+Alerting and Reporting: Our systems can be configured to send alerts and generate reports based on predefined thresholds or events.
+Remote Access: Depending on customer needs, we can enable remote access and control of the monitoring system, allowing users to stay informed and take action from anywhere.
+Customization: We offer customization options to tailor the monitoring controller to unique requirements, industries, or applications.
+Our commitment to delivering high-quality, customized electronics-based controllers ensures that customers receive solutions that precisely align with their specific needs, whether for IoT applications, monitoring, or other control requirements.
+
+
+Our extensive experience spans across a diverse range of industries, including:
+1. Water Treatment: We provide solutions for controlling and monitoring water treatment processes, ensuring water quality and safety.
+2. Gas Systems: Our expertise extends to gas control systems, offering precise control and safety measures for gas handling and distribution.
+3. Data Centers: We design and implement advanced control and monitoring systems to optimize data center operations, ensuring reliability and efficiency.
+4. ACMV (Air Conditioning, Mechanical, and Ventilation): We specialize in climate control systems, maintaining optimal conditions for comfort and productivity.
+5. Chiller Systems: Our solutions for chiller systems ensure efficient cooling and temperature control, essential for various industrial processes.
+6. Climate Monitoring: We provide advanced climate monitoring solutions for environmental and industrial applications, enabling data collection and analysis.
+7. Manufacturing Factories: Our controllers and monitoring systems enhance manufacturing processes by ensuring precision, efficiency, and quality control.
+In each of these industries, our focus is on designing, implementing, and maintaining customized electronics-based controllers to meet specific operational requirements. Whether it's optimizing processes, enhancing safety, or ensuring compliance, our tailored solutions are designed to address the unique challenges and goals of our clients across diverse sectors.
+
+Contact 
+HIRUSH AUTOMATION PTE.LTD 
+531A UPPER CROSS STREET 
+#04-95 HONG LIM COMPLEX 
+Singapore 051531 
++6581830763
+admin@hirushautomation.com
+
+
+HIRUSH AUTOMATION (PVT) LTD 
+247, MARUTHANKULAM ROAD, 
+KOVILPUTHUKKULAM, 
+VAVUNIYA 
++94766099261
+admin@hirushautomation.com
+
+
+
+
+
+
+

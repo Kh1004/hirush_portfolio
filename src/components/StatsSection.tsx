@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+import AnimateOnScroll from '@/components/AnimateOnScroll';
 
 interface StatItem {
   value: string;
@@ -16,6 +16,7 @@ const stats: StatItem[] = [
 export default function StatsSection() {
   return (
     <section className="bg-[#B81005] py-10">
+      <AnimateOnScroll>
       <div className="max-w-[1180px] mx-auto px-6 md:px-[50px]">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((stat) => (
@@ -33,6 +34,7 @@ export default function StatsSection() {
           ))}
         </div>
       </div>
+      </AnimateOnScroll>
     </section>
   );
 }

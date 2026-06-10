@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+import AnimateOnScroll from '@/components/AnimateOnScroll';
 
 interface ServiceDetail {
   title: string;
@@ -10,53 +10,53 @@ interface ServiceDetail {
 
 const serviceDetails: ServiceDetail[] = [
   {
-    title: 'Power & Control Distribution Boards',
+    title: 'PLC Programming',
     description:
-      'We design comprehensive power and control distribution panels integrated with drives and PLC components. Our designs meet international standards and are tailored to your specific industrial requirements.',
+      'Our expertise lies in proposing suitable PLC hardware configurations and delivering programming services aligned precisely with your control system requirements and control philosophy. We specialize in PLC programming across all major brands.',
     features: [
-      'MCC & PCC Panel Design',
-      'VFD & Soft Starter Integration',
-      'PLC & SCADA Integration',
-      'Safety Relay Systems',
-      'Bus Bar Sizing & Layout',
-    ],
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Electrical & Control Drawings',
-    description:
-      'Professional electrical and control drawings including Panel layout, Single Line Diagrams, Schematic diagrams, and wiring diagrams using industry-standard tools.',
-    features: [
-      'Single Line Diagrams (SLD)',
-      'Schematic & Wiring Diagrams',
-      'Panel Layout Drawings',
-      'Cable Schedule & Routing',
-      'As-Built Documentation',
-    ],
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'PLC Programming & HMI/SCADA',
-    description:
-      'Expert development of PLC programming and HMI/SCADA design based on your specific process requirements. We support all major PLC brands and SCADA platforms.',
-    features: [
-      'Siemens TIA Portal / Step 7',
-      'Allen Bradley Studio 5000',
-      'Mitsubishi GX Works',
-      'HMI Screen Development',
-      'SCADA System Integration',
+      'Siemens PLC Programming',
+      'Schneider PLC Programming',
+      'Allen-Bradley PLC Programming',
+      'Mitsubishi PLC Programming',
+      'Hardware Configuration & Philosophy',
     ],
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'HMI/SCADA Design',
+    description:
+      'We offer SCADA software and communication configuration solutions tailored to meet contractual requirements. Our engineering services include development of robust, visually appealing, and user-friendly HMI graphics across multiple platforms.',
+    features: [
+      'SCADA Software Configuration',
+      'HMI Graphics Development',
+      'Alarm Management Systems',
+      'Trending & Reporting',
+      'OPC Communication Setup',
+    ],
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Electrical & Control Panel',
+    description:
+      'Control panel design and fabrication are integral components of our offerings. We specialize in crafting high-quality electrical panels expertly integrated with drives, starters, PLC systems, and control components for precise control and monitoring.',
+    features: [
+      'Control Panel Design & Fabrication',
+      'Drive & Starter Integration',
+      'PLC System Integration',
+      'Electrical Control Components',
+      'Drawing & Documentation Support',
+    ],
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
       </svg>
     ),
   },
@@ -65,6 +65,7 @@ const serviceDetails: ServiceDetail[] = [
 export default function ServicesSection() {
   return (
     <section id="services" className="bg-white py-12">
+      <AnimateOnScroll>
       <div className="max-w-[1180px] mx-auto px-6 md:px-[50px]">
         <h2
           className="font-coda text-[30px] font-normal text-center uppercase mb-2 leading-[1.25]"
@@ -72,7 +73,7 @@ export default function ServicesSection() {
         >
           Our Services
         </h2>
-        <p className="text-center text-[#AAAAAA] text-[14px] mb-8">
+        <p className="text-center text-[#777777] text-[14px] mb-8">
           Comprehensive automation engineering solutions for your industrial needs
         </p>
 
@@ -125,6 +126,7 @@ export default function ServicesSection() {
           ))}
         </div>
       </div>
+      </AnimateOnScroll>
     </section>
   );
 }

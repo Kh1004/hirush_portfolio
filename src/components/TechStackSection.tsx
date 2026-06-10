@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+import AnimateOnScroll from '@/components/AnimateOnScroll';
 
 interface PLCBrand {
   name: string;
@@ -8,7 +8,7 @@ interface PLCBrand {
 
 const plcBrands: PLCBrand[] = [
   { name: 'Siemens', partner: 'Mitsubishi' },
-  { name: 'Allen Bradley', partner: 'ABB' },
+  { name: 'Schneider', partner: 'Allen Bradley' },
   { name: 'Omron', partner: 'Keyence' },
   { name: 'Panasonic', partner: 'Nais' },
   { name: 'Direct Logic', partner: 'GE' },
@@ -19,6 +19,7 @@ const designTools = ['AutoCAD', 'ePlan Electric', 'PanelDraw', 'PSCAD'];
 export default function TechStackSection() {
   return (
     <section className="py-12" style={{ background: '#F5F5F5' }}>
+      <AnimateOnScroll>
       <div className="max-w-[1180px] mx-auto px-6 md:px-[50px]">
         <h2
           className="font-coda text-[30px] font-normal text-center uppercase mb-2 leading-[1.25]"
@@ -26,7 +27,7 @@ export default function TechStackSection() {
         >
           Technology Stack
         </h2>
-        <p className="text-center text-[#AAAAAA] text-[14px] mb-8">
+        <p className="text-center text-[#777777] text-[14px] mb-8">
           Expertise across leading automation platforms and design tools
         </p>
 
@@ -92,7 +93,7 @@ export default function TechStackSection() {
                     />
                     <span>
                       <span className="font-medium">{brand.name}</span>
-                      <span className="text-[#AAAAAA]"> | </span>
+                      <span className="text-[#777777]"> | </span>
                       <span className="font-medium">{brand.partner}</span>
                     </span>
                   </li>
@@ -141,6 +142,7 @@ export default function TechStackSection() {
           </div>
         </div>
       </div>
+      </AnimateOnScroll>
     </section>
   );
 }

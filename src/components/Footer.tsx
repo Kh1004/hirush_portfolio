@@ -11,10 +11,10 @@ const footerColumns: FooterColumn[] = [
   {
     title: 'SERVICES',
     items: [
-      'Power & Control Design',
-      'Electrical Drawings',
       'PLC Programming',
-      'HMI/SCADA Development',
+      'HMI/SCADA Design',
+      'Electrical & Control Panel',
+      'Controller Design',
       'Online Training',
     ],
   },
@@ -26,7 +26,7 @@ const footerColumns: FooterColumn[] = [
     title: 'PLC PLATFORMS',
     items: [
       'Siemens | Mitsubishi',
-      'Allen Bradley | ABB',
+      'Schneider | Allen Bradley',
       'Omron | Keyence',
       'Panasonic | Nais',
       'Direct Logic | GE',
@@ -50,7 +50,7 @@ export default function Footer() {
         {/* Company Description */}
         <div className="py-6 border-b border-gray-700">
           <p className="text-[#CCCCCC] text-[13px] leading-[1.6] max-w-2xl">
-            Hirushautomation provides expert electrical and control engineering solutions, including PLC programming, HMI/SCADA design, and professional training for industrial automation projects.
+            Hirush Automation Pte Ltd provides expert electrical, control, and automation engineering solutions. We specialize in PLC/HMI/SCADA systems, control panel design and fabrication, customized controller development, and professional training. With offices in Singapore and Sri Lanka, we serve industries including water treatment, data centers, ACMV, and manufacturing.
           </p>
         </div>
 
@@ -81,7 +81,7 @@ export default function Footer() {
                 {col.items.map((item) => (
                   <li
                     key={item}
-                    className="text-[#8F8F8E] text-[12px] leading-[1.6]"
+                    className="text-[#B0B0B0] text-[12px] leading-[1.6]"
                     style={{
                       padding: '3px 0 3px 17px',
                       borderBottom: '1px dotted #111111',
@@ -110,7 +110,7 @@ export default function Footer() {
             margin: '0',
           }}
         >
-          Copyright&copy;&nbsp;&nbsp;Hirushautomation Pte Ltd&nbsp;| All Rights Reserved
+          Copyright&copy;&nbsp;&nbsp;Hirush Automation Pte Ltd&nbsp;| All Rights Reserved
         </div>
       </div>
     </footer>

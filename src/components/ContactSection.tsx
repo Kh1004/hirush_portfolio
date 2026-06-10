@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import AnimateOnScroll from '@/components/AnimateOnScroll';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -23,6 +24,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="bg-white py-12">
+      <AnimateOnScroll>
       <div className="max-w-[1180px] mx-auto px-6 md:px-[50px]">
         <h2
           className="font-coda text-[30px] font-normal text-center uppercase mb-2 leading-[1.25]"
@@ -30,13 +32,13 @@ export default function ContactSection() {
         >
           Contact Us
         </h2>
-        <p className="text-center text-[#AAAAAA] text-[14px] mb-8">
+        <p className="text-center text-[#777777] text-[14px] mb-8">
           Get in touch with our automation specialists
         </p>
 
         <div className="flex flex-col md:flex-row gap-8">
           {/* Contact Info */}
-          <div className="md:w-[280px] flex-shrink-0">
+          <div className="md:w-[320px] flex-shrink-0">
             <div
               className="p-6 h-full"
               style={{ background: '#333333' }}
@@ -60,8 +62,20 @@ export default function ContactSection() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-[#DDDDDD] text-[13px] font-medium">Admin</div>
-                    <div className="text-[#8F8F8E] text-[12px]">Contact Person</div>
+                    <div className="text-[#DDDDDD] text-[13px] font-medium">Singapore Office</div>
+                    <div className="text-[#B0B0B0] text-[11px] leading-[1.5]">HIRUSH AUTOMATION PTE.LTD<br />531A UPPER CROSS STREET<br />#04-95 HONG LIM COMPLEX<br />Singapore 051531</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="mt-0.5 text-[#B81005] flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="text-[#DDDDDD] text-[13px] font-medium">Sri Lanka Office</div>
+                    <div className="text-[#B0B0B0] text-[11px] leading-[1.5]">HIRUSH AUTOMATION (PVT) LTD<br />247, MARUTHANKULAM ROAD<br />KOVILPUTHUKKULAM, VAVUNIYA<br />Sri Lanka</div>
                   </div>
                 </div>
 
@@ -72,8 +86,8 @@ export default function ContactSection() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-[#DDDDDD] text-[13px]">Singapore: (+65)81830763</div>
-                    <div className="text-[#DDDDDD] text-[13px]">Srilanka: (+94)766099261</div>
+                    <div className="text-[#DDDDDD] text-[13px]">Singapore: (+65) 8183 0763</div>
+                    <div className="text-[#DDDDDD] text-[13px]">Sri Lanka: (+94) 7660 99261</div>
                   </div>
                 </div>
 
@@ -205,6 +219,7 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
+      </AnimateOnScroll>
     </section>
   );
 }
