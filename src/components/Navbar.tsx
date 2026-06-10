@@ -9,11 +9,11 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-{ label: 'Home', href: '#' },
-{ label: 'SERVICES', href: '#services' },
-{ label: 'PRODUCTS', href: '#products' },
-{ label: 'TRAININGS', href: '#trainings' },
-{ label: 'CONTACT', href: '#contact' }];
+  { label: 'Home', href: '#' },
+  { label: 'SERVICES', href: '#services' },
+  { label: 'PRODUCTS', href: '#products' },
+  { label: 'TRAININGS', href: '#trainings' },
+  { label: 'CONTACT', href: '#contact' }];
 
 
 export default function Navbar() {
@@ -34,8 +34,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-shadow duration-300 ${
-      scrolled ? 'shadow-lg' : ''}`
+      className={`sticky top-0 z-50 transition-shadow duration-300 ${scrolled ? 'shadow-lg' : ''}`
       }>
 
       {/* Top bar */}
@@ -50,7 +49,7 @@ export default function Navbar() {
               <img
                 src="/assets/images/logo.png"
                 alt="Hirush Automation Logo"
-                className="max-h-[105px] w-auto max-w-[300px] object-contain py-1" />
+                className="max-h-[90px] w-auto max-w-[300px] object-contain py-1" />
             </a>
           </div>
 
@@ -64,10 +63,9 @@ export default function Navbar() {
                     <a
                       href={item.href}
                       onClick={() => handleItemClick(item.label)}
-                      className={`block text-[13px] uppercase px-4 py-3 text-center transition-colors duration-200 no-relative whitespace-nowrap focus-visible:outline-2 focus-visible:outline-[#B81005] ${
-                      isActive ?
-                      'text-white bg-[#B81005]' :
-                      'text-[#B81005] hover:text-[#940D05]'}`
+                      className={`block text-[13px] uppercase px-4 py-3 text-center transition-colors duration-200 no-relative whitespace-nowrap focus-visible:outline-2 focus-visible:outline-[#B81005] ${isActive ?
+                          'text-white bg-[#B81005]' :
+                          'text-[#B81005] hover:text-[#940D05]'}`
                       }>
                       {item.label}
                     </a>
@@ -93,7 +91,7 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         {mobileOpen &&
-        <div className="md:hidden bg-white border-t border-gray-100 px-6 pb-4">
+          <div className="md:hidden bg-white border-t border-gray-100 px-6 pb-4">
             <ul className="flex flex-col gap-1 list-none m-0 p-0">
               {navItems.map((item) => {
                 const isActive = activeItem === item.label;
@@ -102,8 +100,7 @@ export default function Navbar() {
                     <a
                       href={item.href}
                       onClick={() => handleItemClick(item.label)}
-                      className={`block text-[13px] uppercase py-2 px-2 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#B81005] ${
-                      isActive ? 'text-white bg-[#B81005] px-3' : 'text-[#B81005]'}`
+                      className={`block text-[13px] uppercase py-2 px-2 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#B81005] ${isActive ? 'text-white bg-[#B81005] px-3' : 'text-[#B81005]'}`
                       }>
                       {item.label}
                     </a>
