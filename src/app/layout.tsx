@@ -29,12 +29,12 @@ export const metadata: Metadata = {
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://hirushautomation.com',
     type: 'website',
     images: [
-    {
-      url: '/assets/images/og-image.png',
-      width: 1200,
-      height: 630,
-      alt: 'Hirushautomation engineering solutions for PLC programming and electrical control design'
-    }]
+      {
+        url: '/assets/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Hirushautomation engineering solutions for PLC programming and electrical control design'
+      }]
 
   },
   twitter: {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-    { url: '/favicon.ico', type: 'image/x-icon' }]
+      { url: '/assets/images/logo.png', type: 'image/png' }]
 
   }
 };
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children
 
-}: Readonly<{children: React.ReactNode;}>) {
+}: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en" className={coda.variable} style={{ scrollBehavior: 'smooth' }}>
       <head>
