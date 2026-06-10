@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hirush Automation - Custom Styles */
+
+/* Font */
+@layer base {
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333333;
+    background: #FFFFFF;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Coda', cursive, sans-serif;
+    font-weight: normal;
+    line-height: 1.25;
+    margin: 0 0 10px;
+    color: #111111;
+  }
+
+  h1 { font-size: 30px; }
+  h2 { font-size: 23px; }
+  h3 { font-size: 20px; }
+  h4 { font-size: 17px; }
+  h5 { font-size: 15px; }
+  h6 { font-size: 13px; }
+
+  a {
+    text-decoration: none;
+    color: #FC542B;
+  }
+
+  a:hover {
+    color: #B81005;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  ul, ol {
+    padding: 0 0 10px 20px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: outside none square;
+  }
+
+  ol {
+    list-style: outside none decimal;
+  }
+
+  strong, b {
+    font-weight: bold;
+  }
+
+  img {
+    max-width: 100%;
+    border: 0;
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  .font-coda {
+    font-family: 'Coda', cursive, sans-serif;
+  }
+
+  .clear-both {
+    clear: both;
+  }
+
+  .text-justify {
+    text-align: justify;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #EEEEEE;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #B81005;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #940D05;
+  }
+
+  /* Focus styles */
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    border-color: #B81005 !important;
+    box-shadow: 0 0 0 2px rgba(184, 16, 5, 0.15);
+  }
+
+  /* Transition defaults */
+  .transition-default {
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Content separator */
+  .content-ver-sep {
+    clear: both;
+    height: 1px;
+    background: #CCCCCC;
+    border-bottom: 1px solid #FFFFFF;
+  }
+
+  /* Featured box layout */
+  .featured-box-first {
+    width: 277px;
+    float: left;
+  }
+
+  .featured-box {
+    width: 277px;
+    margin-left: 49.5px;
+    float: left;
+  }
+
+  /* Footer widget layout */
+  #footer-sidebar .widget {
+    width: 277px;
+    margin: 15px 0;
+  }
+
+  #footer-sidebar #first-footer-widget {
+    float: left;
+  }
+
+  #footer-sidebar #footer-widgets {
+    margin-left: 49.5px;
+    float: left;
+  }
+
+  /* Hover effects for nav */
+  #smallbusiness-main-menu a:hover {
+    color: #940D05;
+  }
+
+  /* Button styles matching original */
+  .myButton {
+    background-color: black;
+    border-radius: 28px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 12px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+    position: relative;
+    top: 0;
+    color: white;
+    text-transform: none;
+  }
+
+  .myButton:hover {
+    background-color: #5cbf2a;
+  }
+
+  /* Animate on scroll */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+
+  /* Card hover lift */
+  .card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+}
