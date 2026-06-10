@@ -4,7 +4,7 @@ import AnimateOnScroll from '@/components/AnimateOnScroll';
 
 export default function HeroSlider() {
   return (
-    <section className="relative w-full overflow-hidden" style={{ height: '399px' }}>
+    <section className="relative w-full overflow-hidden h-[500px] lg:h-[600px]">
 
       <Image
         src="/assets/images/bg.jpg"
@@ -14,25 +14,43 @@ export default function HeroSlider() {
         priority
       />
 
-      <div className="absolute inset-0 bg-black/20" />
+      <div className="absolute inset-0 bg-black/30" />
 
-      <div className="absolute inset-0 flex items-center justify-end">
-        <AnimateOnScroll>
-          <div
-            className="bg-black/70 text-left p-5 rounded-tl-[10px] rounded-bl-[10px]"
-            style={{ maxWidth: '425px', width: '90%', marginTop: '70px' }}>
+      <div className="absolute inset-0 flex items-center">
+        <div className="w-[92%] max-w-[1720px] mx-auto flex justify-center md:justify-end">
+          <AnimateOnScroll className="w-full max-w-[550px] px-4 md:px-0">
+            <div
+              className="bg-black/75 text-left p-6 md:p-8 rounded-xl shadow-2xl backdrop-blur-sm border border-white/10"
+              style={{ width: '100%' }}>
 
-            <h2
-              className="font-coda text-[23px] font-normal mb-[10px] leading-[1.25]"
-              style={{ color: '#FC542B' }}>
+              <h1 className="font-coda text-2xl md:text-4xl lg:text-5xl font-bold leading-[1.15] text-[#FC542B] mb-2">
+                Industrial Automation & Control Solutions
+              </h1>
+              <p className="font-coda text-[10px] md:text-xs lg:text-sm tracking-wider text-[#EEEEEE] uppercase mb-4 font-semibold opacity-90">
+                PLC • HMI • SCADA • Control Panels
+              </p>
+              
+              <p className="text-[#DDDDDD] text-[13px] md:text-[14px] leading-relaxed mb-6">
+                Hirush Automation Pte Ltd, established in Singapore under the visionary leadership of R. Amulyan, is a distinguished Electrical, Control, and Automation Company. With over a decade of experience and offices in Singapore and Sri Lanka, we specialize in PLC/HMI/SCADA systems, control panel design, and industrial automation solutions.
+              </p>
 
-              About Us
-            </h2>
-            <p className="text-[#EEEEEE] text-[14px] leading-[1.6]">
-              Hirush Automation Pte Ltd, established in Singapore under the visionary leadership of R. Amulyan, is a distinguished Electrical, Control, and Automation Company. With over a decade of experience and offices in Singapore and Sri Lanka, we specialize in PLC/HMI/SCADA systems, control panel design, and industrial automation solutions.
-            </p>
-          </div>
-        </AnimateOnScroll>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="#services"
+                  className="inline-block bg-[#B81005] hover:bg-[#940D05] text-white text-[11px] md:text-[12px] font-bold uppercase tracking-wider px-5 py-3 rounded transition-all duration-300 shadow-md transform hover:-translate-y-0.5"
+                >
+                  Explore Services
+                </a>
+                <a
+                  href="#contact"
+                  className="inline-block bg-transparent hover:bg-white/10 text-white text-[11px] md:text-[12px] font-bold uppercase tracking-wider px-5 py-3 rounded border border-white transition-all duration-300 shadow-md transform hover:-translate-y-0.5"
+                >
+                  Request Consultation
+                </a>
+              </div>
+            </div>
+          </AnimateOnScroll>
+        </div>
       </div>
 
       <div

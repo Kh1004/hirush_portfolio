@@ -42,24 +42,26 @@ const services: ServiceBox[] = [
 
 export default function FeaturedServices() {
   return (
-    <section className="bg-white w-full">
+    <section className="bg-white w-full py-12 md:py-16 lg:py-24">
       {/* Heading */}
       <AnimateOnScroll>
-      <div className="w-full max-w-[1180px] mx-auto px-6 md:px-[50px]">
-        <h1
-          id="heading"
-          className="font-coda text-[33px] text-center uppercase mb-5 mt-0 leading-[1.25]"
-          style={{ color: '#777777' }}
-        >
-          Comprehensive electrical, control, and automation solutions for industrial excellence
-        </h1>
+      <div className="w-[92%] max-w-[1720px] mx-auto">
+        <div className="flex flex-col items-center mb-12">
+          <h2
+            id="heading"
+            className="font-coda text-[26px] md:text-[32px] font-normal text-center uppercase leading-[1.25] text-[#111111] max-w-4xl"
+          >
+            Comprehensive electrical, control, and automation solutions for industrial excellence
+          </h2>
+          <div className="w-[80px] h-[3px] bg-[#B81005] mt-4" />
+        </div>
 
-        {/* Featured boxes - flexbox instead of float */}
-        <div className="flex flex-wrap gap-6 mb-4 justify-center">
+        {/* Featured boxes - grid layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-4">
           {services.map((service) => (
             <div
               key={service.title}
-              className="group w-full sm:w-[calc(50%-12px)] lg:w-[277px]"
+              className="group w-full"
             >
               {/* Icon */}
               <div className="flex justify-center mb-2 text-[#B81005] group-hover:text-[#940D05] transition-colors duration-200">

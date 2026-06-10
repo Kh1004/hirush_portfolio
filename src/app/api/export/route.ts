@@ -64,7 +64,7 @@ export async function GET() {
     }
 
     const buffer = await zip.generateAsync({
-      type: 'nodebuffer',
+      type: 'uint8array',
       compression: 'DEFLATE',
       compressionOptions: { level: 6 },
     });
@@ -73,7 +73,9 @@ export async function GET() {
       return NextResponse.json({ error: 'Generated zip is empty' }, { status: 500 });
     }
 
-    return new NextResponse(buffer, {
+    const blob = new Blob([buffer], { type: 'application/zip' });
+
+    return new NextResponse(blob, {
       status: 200,
       headers: {
         'Content-Type': 'application/zip',

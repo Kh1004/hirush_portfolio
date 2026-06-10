@@ -23,22 +23,24 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-white py-12">
+    <section id="contact" className="bg-white py-12 md:py-16 lg:py-24 scroll-mt-32">
       <AnimateOnScroll>
-      <div className="max-w-[1180px] mx-auto px-6 md:px-[50px]">
-        <h2
-          className="font-coda text-[30px] font-normal text-center uppercase mb-2 leading-[1.25]"
-          style={{ color: '#111111' }}
-        >
-          Contact Us
-        </h2>
-        <p className="text-center text-[#777777] text-[14px] mb-8">
+      <div className="w-[92%] max-w-[1720px] mx-auto">
+        <div className="flex flex-col items-center mb-8">
+          <h2
+            className="font-coda text-[28px] md:text-[34px] font-normal text-center uppercase leading-[1.25] text-[#111111]"
+          >
+            Contact Us
+          </h2>
+          <div className="w-[60px] h-[3px] bg-[#B81005] mt-3" />
+        </div>
+        <p className="text-center text-[#777777] text-[14px] mb-12 -mt-4">
           Get in touch with our automation specialists
         </p>
 
-        <div className="flex flex-col md:flex-row gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Info */}
-          <div className="md:w-[320px] flex-shrink-0">
+          <div className="md:col-span-1">
             <div
               className="p-6 h-full"
               style={{ background: '#333333' }}
@@ -117,7 +119,7 @@ export default function ContactSection() {
           </div>
 
           {/* Contact Form */}
-          <div className="flex-1">
+          <div className="md:col-span-2">
             {submitted ? (
               <div
                 className="flex items-center justify-center h-full min-h-[200px] text-center p-8"

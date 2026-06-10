@@ -45,7 +45,7 @@ export default function Footer() {
       }}
     >
       <div
-        className="w-full max-w-[1180px] mx-auto px-6 md:px-[50px]"
+        className="w-[92%] max-w-[1720px] mx-auto"
       >
         {/* Company Description */}
         <div className="py-6 border-b border-gray-700">
@@ -54,12 +54,12 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Footer widgets - flexbox instead of float */}
-        <div className="flex flex-wrap gap-6 py-6 justify-between">
+        {/* Footer widgets - grid layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-8 border-b border-gray-700">
           {footerColumns.map((col) => (
             <div
               key={col.title}
-              className="w-full sm:w-[calc(50%-12px)] lg:w-auto flex-1 min-w-[200px]"
+              className="w-full"
             >
               <h3
                 className="font-coda text-[20px] font-normal pb-[5px] uppercase"

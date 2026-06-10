@@ -3,20 +3,22 @@ import AnimateOnScroll from '@/components/AnimateOnScroll';
 
 export default function ControllerDesign() {
   return (
-    <section id="controllers" className="py-12" style={{ background: '#F5F5F5' }}>
+    <section id="controllers" className="py-12 md:py-16 lg:py-24" style={{ background: '#F5F5F5' }}>
       <AnimateOnScroll>
-      <div className="max-w-[1180px] mx-auto px-6 md:px-[50px]">
-        <h2
-          className="font-coda text-[30px] font-normal text-center uppercase mb-2 leading-[1.25]"
-          style={{ color: '#111111' }}
-        >
-          Controller Design
-        </h2>
-        <p className="text-center text-[#777777] text-[14px] mb-8">
+      <div className="w-[92%] max-w-[1720px] mx-auto">
+        <div className="flex flex-col items-center mb-8">
+          <h2
+            className="font-coda text-[28px] md:text-[34px] font-normal text-center uppercase leading-[1.25] text-[#111111]"
+          >
+            Controller Design
+          </h2>
+          <div className="w-[60px] h-[3px] bg-[#B81005] mt-3" />
+        </div>
+        <p className="text-center text-[#777777] text-[14px] mb-12 -mt-4">
           Customized electronics-based controllers tailored to your specific requirements
         </p>
 
-        <div className="flex flex-col md:flex-row gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* IoT Controllers */}
           <div className="flex-1">
             <div
@@ -108,6 +110,16 @@ export default function ControllerDesign() {
               </ul>
             </div>
           </div>
+        </div>
+
+        {/* Centered CTA */}
+        <div className="flex justify-center mt-12">
+          <a
+            href="#contact"
+            className="inline-block bg-[#B81005] hover:bg-[#940D05] text-white text-[12px] md:text-[13px] font-bold uppercase tracking-wider px-6 py-3.5 rounded transition-all duration-300 shadow-md transform hover:-translate-y-0.5"
+          >
+            Request Custom Controller Design
+          </a>
         </div>
       </div>
       </AnimateOnScroll>

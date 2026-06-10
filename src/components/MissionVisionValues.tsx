@@ -49,19 +49,19 @@ const coreValueDetails = [
 
 export default function MissionVisionValues() {
   return (
-    <section className="bg-white py-12">
+    <section className="bg-white py-12 md:py-16 lg:py-24">
       <AnimateOnScroll>
-      <div className="max-w-[1180px] mx-auto px-6 md:px-[50px]">
+      <div className="w-[92%] max-w-[1720px] mx-auto">
         {/* Mission / Vision / Core Values cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {items.map((item) => (
             <div
               key={item.title}
-              className="p-6 border border-gray-100 text-center group hover:border-[#B81005] transition-all duration-300"
-              style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
+              className="p-6 border border-gray-200 border-t-[3px] border-t-gray-200 hover:border-gray-200 hover:border-t-[#B81005] text-center group rounded-md transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col justify-start h-full bg-white"
+              style={{ boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }}
             >
               <div
-                className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-[#B81005] group-hover:bg-[#B81005] group-hover:text-white transition-all duration-300"
+                className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 text-[#B81005] group-hover:bg-[#B81005] group-hover:text-white transition-all duration-300"
                 style={{ background: 'rgba(184,16,5,0.08)' }}
               >
                 {item.icon}
@@ -80,7 +80,7 @@ export default function MissionVisionValues() {
         </div>
 
         {/* Core Values Details */}
-        <div className="border border-gray-100 p-6" style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
+        <div className="border border-gray-200 p-8 rounded-md bg-white" style={{ boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }}>
           <h3
             className="font-coda text-[18px] font-normal uppercase mb-4 pb-2 leading-[1.25]"
             style={{
@@ -90,9 +90,9 @@ export default function MissionVisionValues() {
           >
             Our Core Values in Practice
           </h3>
-          <ul className="space-y-3">
+          <ul className="space-y-3 p-0 m-0">
             {coreValueDetails.map((val) => (
-              <li key={val} className="flex items-start gap-3 text-[13px] text-[#555555] leading-[1.6]">
+              <li key={val} className="flex items-start gap-3 text-[13px] text-[#555555] leading-[1.6] list-none p-0 m-0">
                 <span
                   className="w-2 h-2 rounded-full flex-shrink-0 mt-1.5"
                   style={{ background: '#B81005' }}

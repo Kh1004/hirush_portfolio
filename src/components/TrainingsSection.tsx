@@ -61,20 +61,22 @@ const levelColors: Record<string, string> = {
 
 export default function TrainingsSection() {
   return (
-    <section id="trainings" className="bg-white py-12">
+    <section id="trainings" className="bg-white py-12 md:py-16 lg:py-24 scroll-mt-32">
       <AnimateOnScroll>
-      <div className="max-w-[1180px] mx-auto px-6 md:px-[50px]">
-        <h2
-          className="font-coda text-[30px] font-normal text-center uppercase mb-2 leading-[1.25]"
-          style={{ color: '#111111' }}
-        >
-          Training Programs
-        </h2>
-        <p className="text-center text-[#777777] text-[14px] mb-8">
+      <div className="w-[92%] max-w-[1720px] mx-auto">
+        <div className="flex flex-col items-center mb-8">
+          <h2
+            className="font-coda text-[28px] md:text-[34px] font-normal text-center uppercase leading-[1.25] text-[#111111]"
+          >
+            Training Programs
+          </h2>
+          <div className="w-[60px] h-[3px] bg-[#B81005] mt-3" />
+        </div>
+        <p className="text-center text-[#777777] text-[14px] mb-12 -mt-4">
           Online and in-person classes to advance your automation engineering skills
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {trainings.map((training) => (
             <div
               key={training.title}

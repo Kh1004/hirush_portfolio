@@ -18,20 +18,22 @@ const designTools = ['AutoCAD', 'ePlan Electric', 'PanelDraw', 'PSCAD'];
 
 export default function TechStackSection() {
   return (
-    <section className="py-12" style={{ background: '#F5F5F5' }}>
+    <section className="py-12 md:py-16 lg:py-24" style={{ background: '#F5F5F5' }}>
       <AnimateOnScroll>
-      <div className="max-w-[1180px] mx-auto px-6 md:px-[50px]">
-        <h2
-          className="font-coda text-[30px] font-normal text-center uppercase mb-2 leading-[1.25]"
-          style={{ color: '#111111' }}
-        >
-          Technology Stack
-        </h2>
-        <p className="text-center text-[#777777] text-[14px] mb-8">
+      <div className="w-[92%] max-w-[1720px] mx-auto">
+        <div className="flex flex-col items-center mb-8">
+          <h2
+            className="font-coda text-[28px] md:text-[34px] font-normal text-center uppercase leading-[1.25] text-[#111111]"
+          >
+            Technology Stack
+          </h2>
+          <div className="w-[60px] h-[3px] bg-[#B81005] mt-3" />
+        </div>
+        <p className="text-center text-[#777777] text-[14px] mb-12 -mt-4">
           Expertise across leading automation platforms and design tools
         </p>
 
-        <div className="flex flex-col md:flex-row gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Design Tools */}
           <div className="flex-1">
             <div
