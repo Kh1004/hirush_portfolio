@@ -1,19 +1,6 @@
-'use client';
+﻿'use client';
 import React, { useState, useEffect } from 'react';
-
-
-interface NavItem {
-  label: string;
-  href: string;
-  isActive?: boolean;
-}
-
-const navItems: NavItem[] = [
-  { label: 'Home', href: '#' },
-  { label: 'SERVICES', href: '#services' },
-  { label: 'PRODUCTS', href: '#products' },
-  { label: 'TRAININGS', href: '#trainings' },
-  { label: 'CONTACT', href: '#contact' }];
+import { nav } from '@/data/site';
 
 
 export default function Navbar() {
@@ -54,9 +41,9 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Nav (center) */}
-          <nav className="hidden md:block font-coda flex-none">
+          <nav className="hidden lg:block font-coda flex-none">
             <ul className="flex items-center list-none m-0 p-0">
-              {navItems.map((item) => {
+              {nav.map((item) => {
                 const isActive = activeItem === item.label;
                 return (
                   <li key={item.label} className="m-0 p-0 list-none">
@@ -76,7 +63,7 @@ export default function Navbar() {
           </nav>
 
           {/* Mobile hamburger (right) */}
-          <div className="flex-1 flex justify-end md:hidden">
+          <div className="flex-1 flex justify-end lg:hidden">
             <button
               className="flex flex-col gap-[5px] p-2"
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -91,9 +78,9 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         {mobileOpen &&
-          <div className="md:hidden bg-white border-t border-gray-100 px-6 pb-4">
+          <div className="lg:hidden bg-white border-t border-gray-100 px-6 pb-4">
             <ul className="flex flex-col gap-1 list-none m-0 p-0">
-              {navItems.map((item) => {
+              {nav.map((item) => {
                 const isActive = activeItem === item.label;
                 return (
                   <li key={item.label} className="list-none m-0 p-0">

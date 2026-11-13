@@ -1,15 +1,15 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSlider from '@/components/HeroSlider';
-import MissionVisionValues from '@/components/MissionVisionValues';
+import AboutSection from '@/components/AboutSection';
+import MissionVision from '@/components/MissionVision';
 import FeaturedServices from '@/components/FeaturedServices';
-import StatsSection from '@/components/StatsSection';
 import ServicesSection from '@/components/ServicesSection';
-import ControllerDesign from '@/components/ControllerDesign';
+import ToolsSection from '@/components/ToolsSection';
 import ProductsSection from '@/components/ProductsSection';
+import ProjectsSection from '@/components/ProjectsSection';
 import TrainingsSection from '@/components/TrainingsSection';
 import IndustriesServed from '@/components/IndustriesServed';
-import TechStackSection from '@/components/TechStackSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -22,32 +22,32 @@ export default function HomePage() {
       {/* Hero Slider */}
       <HeroSlider />
 
-      {/* Mission, Vision & Core Values */}
-      <MissionVisionValues />
+      {/* About Us */}
+      <AboutSection />
 
-      {/* Featured Services - 3 column boxes */}
+      {/* Mission & Vision */}
+      <MissionVision />
+
+      {/* Featured Services - 5 column boxes */}
       <FeaturedServices />
-
-      {/* Stats Bar */}
-      <StatsSection />
 
       {/* Detailed Services */}
       <ServicesSection />
 
-      {/* Controller Design */}
-      <ControllerDesign />
+      {/* Tools */}
+      <ToolsSection />
 
-      {/* Products & Tools */}
+      {/* Products */}
       <ProductsSection />
+
+      {/* Project Reference */}
+      <ProjectsSection />
 
       {/* Training Programs */}
       <TrainingsSection />
 
       {/* Industries We Serve */}
       <IndustriesServed />
-
-      {/* Technology Stack */}
-      <TechStackSection />
 
       {/* Contact Section */}
       <ContactSection />

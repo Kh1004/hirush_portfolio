@@ -1,63 +1,6 @@
 import React from 'react';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
-
-interface Training {
-  title: string;
-  level: string;
-  duration: string;
-  description: string;
-  topics: string[];
-}
-
-const trainings: Training[] = [
-  {
-    title: 'Electrical Design Fundamentals',
-    level: 'Beginner',
-    duration: '4 Weeks',
-    description:
-      'Comprehensive training in electrical design covering component selection, protection calculations, operating methods, and core electrical concepts for beginners.',
-    topics: [
-      'Component Selection (Switches, Relays, Breakers)',
-      'Protection Calculation Methods',
-      'Operating Methods & Principles',
-      'Conceptual Understanding of Circuits',
-      'Basic to Complex Control Systems',
-    ],
-  },
-  {
-    title: 'PLC Programming Training',
-    level: 'Intermediate',
-    duration: '6 Weeks',
-    description:
-      'From basic PLC concepts to advanced programming techniques including ladder logic, function block diagrams, structured text, and hands-on projects.',
-    topics: [
-      'PLC Architecture & Basic Concepts',
-      'Ladder Logic & Function Block Diagrams',
-      'Structured Text Programming',
-      'PID Control & Motion Control',
-      'Hands-On Project Work',
-    ],
-  },
-  {
-    title: 'HMI/SCADA Development',
-    level: 'Intermediate',
-    duration: '6 Weeks',
-    description:
-      'Master HMI screen design and SCADA system development including configuration, data acquisition, trending, alarm handling, and real-world applications.',
-    topics: [
-      'Introduction to HMI/SCADA Systems',
-      'User-Friendly HMI Screen Design',
-      'SCADA Configuration & Data Acquisition',
-      'Trending & Alarm Handling',
-      'Real-World Case Studies & Projects',
-    ],
-  },
-];
-
-const levelColors: Record<string, string> = {
-  Beginner: '#27ae60',
-  Intermediate: '#e67e22',
-};
+import { trainings } from '@/data/site';
 
 export default function TrainingsSection() {
   return (
@@ -73,14 +16,15 @@ export default function TrainingsSection() {
           <div className="w-[60px] h-[3px] bg-[#B81005] mt-3" />
         </div>
         <p className="text-center text-[#777777] text-[14px] mb-12 -mt-4">
-          Online and in-person classes to advance your automation engineering skills
+          Comprehensive training programs designed to equip professionals with the knowledge and
+          skills required in the following areas
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {trainings.map((training) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {trainings.map((training, index) => (
             <div
-              key={training.title}
-              className="border border-gray-100 overflow-hidden hover:border-[#B81005] transition-all duration-300 group"
+              key={training.id}
+              className="border border-gray-100 overflow-hidden hover:border-[#B81005] transition-all duration-300 group flex flex-col"
               style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
             >
               {/* Card header */}
@@ -91,11 +35,13 @@ export default function TrainingsSection() {
                 <div className="flex items-center justify-between mb-2">
                   <span
                     className="text-[11px] uppercase tracking-wide font-bold px-2 py-0.5 rounded-sm text-white"
-                    style={{ background: levelColors[training.level] }}
+                    style={{ background: '#B81005' }}
                   >
-                    {training.level}
+                    Training Area
                   </span>
-                  <span className="text-[12px] text-[#777777]">{training.duration}</span>
+                  <span className="font-coda text-[18px] text-[#B81005]">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
                 </div>
                 <h3
                   className="font-coda text-[17px] font-normal leading-[1.25] group-hover:text-[#B81005] transition-colors duration-300"
@@ -106,7 +52,7 @@ export default function TrainingsSection() {
               </div>
 
               {/* Card body */}
-              <div className="p-4">
+              <div className="p-4 flex-1">
                 <p className="text-[13px] text-[#555555] leading-[1.6] mb-4">
                   {training.description}
                 </p>
@@ -133,7 +79,7 @@ export default function TrainingsSection() {
                   className="block text-center text-[13px] uppercase py-2 px-4 text-white transition-colors duration-200 hover:bg-[#940D05]"
                   style={{ background: '#B81005' }}
                 >
-                  Enroll Now
+                  Enquire About Training
                 </a>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { site } from '@/data/site';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/_next/'],
     },
-    sitemap: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://hirushauto7640.builtwithrocket.new'}/sitemap.xml`,
+    sitemap: `${site.url}/sitemap.xml`,
   };
 }

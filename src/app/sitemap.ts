@@ -1,11 +1,10 @@
 import { MetadataRoute } from 'next';
+import { site } from '@/data/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://hirushauto7640.builtwithrocket.new';
-
   return [
     {
-      url: baseUrl,
+      url: site.url,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1.0,

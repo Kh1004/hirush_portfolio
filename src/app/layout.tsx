@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next';
 import { Coda } from 'next/font/google';
 import '../styles/index.css';
 import '../styles/tailwind.css';
+import { site, seo } from '@/data/site';
 
 const coda = Coda({
   weight: ['400', '800'],
@@ -17,16 +18,16 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://hirushautomation.com'),
-  title: 'Hirush Automation – Electrical, Control & Automation Engineering Solutions',
-  description: 'Hirush Automation Pte Ltd — Expert electrical, control, and automation engineering solutions. PLC programming, HMI/SCADA design, control panel fabrication, and online training. Singapore & Sri Lanka.',
+  metadataBase: new URL(site.url),
+  title: seo.title,
+  description: seo.description,
   alternates: {
-    canonical: process.env.NEXT_PUBLIC_SITE_URL || 'https://hirushautomation.com'
+    canonical: site.url
   },
   openGraph: {
-    title: 'Hirush Automation – Automation Solutions',
-    description: 'Expert electrical, control, and automation engineering. PLC programming, HMI/SCADA design, control panel fabrication, and training by Hirush Automation Pte Ltd.',
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://hirushautomation.com',
+    title: seo.ogTitle,
+    description: seo.ogDescription,
+    url: site.url,
     type: 'website',
     images: [
       {
@@ -39,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hirush Automation – Automation Solutions',
-    description: 'Expert electrical, control, and automation engineering solutions by Hirush Automation Pte Ltd.',
+    title: seo.twitterTitle,
+    description: seo.twitterDescription,
     images: ['/assets/images/og-image.png']
   },
   icons: {
@@ -65,10 +66,10 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Organization',
-              name: 'Hirush Automation',
-              url: process.env.NEXT_PUBLIC_SITE_URL || 'https://hirushautomation.com',
+              name: site.name,
+              url: site.url,
               logo: "https://img.rocket.new/generatedImages/rocket_gen_img_13a747c68-1769707086868.png",
-              description: 'Expert electrical and control engineering design, PLC programming, HMI/SCADA development, and online training.',
+              description: seo.ogDescription,
               sameAs: []
             })
           }} />
@@ -80,9 +81,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebPage',
-              name: 'Hirush Automation – Electrical, Control & Automation Engineering Solutions',
-              url: process.env.NEXT_PUBLIC_SITE_URL || 'https://hirushautomation.com',
-              description: 'Expert electrical, control, and automation engineering solutions. PLC programming, HMI/SCADA design, control panel fabrication, and online training.'
+              name: seo.title,
+              url: site.url,
+              description: seo.description
             })
           }} />
 
@@ -94,8 +95,8 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'SoftwareApplication',
               name: 'Hirush Automation Engineering Services',
-              description: 'Professional automation engineering solutions including PLC programming, HMI/SCADA design, control panel fabrication, and electrical design.',
-              url: process.env.NEXT_PUBLIC_SITE_URL || 'https://hirushautomation.com',
+              description: seo.ogDescription,
+              url: site.url,
               applicationCategory: 'BusinessApplication',
               offers: {
                 '@type': 'Offer',

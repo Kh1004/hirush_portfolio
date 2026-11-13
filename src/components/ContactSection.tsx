@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
+import { offices, site } from '@/data/site';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -57,29 +58,27 @@ export default function ContactSection() {
               </h3>
 
               <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="mt-0.5 text-[#B81005] flex-shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                    </svg>
+                {offices.map((office) => (
+                  <div key={office.id} className="flex items-start gap-3">
+                    <div className="mt-0.5 text-[#B81005] flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="text-[#DDDDDD] text-[13px] font-medium">{office.country} Office</div>
+                      <div className="text-[#B0B0B0] text-[11px] leading-[1.5]">
+                        {office.company}
+                        {office.addressLines.map((line) => (
+                          <React.Fragment key={line}>
+                            <br />
+                            {line}
+                          </React.Fragment>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="text-[#DDDDDD] text-[13px] font-medium">Singapore Office</div>
-                    <div className="text-[#B0B0B0] text-[11px] leading-[1.5]">HIRUSH AUTOMATION PTE.LTD<br />531A UPPER CROSS STREET<br />#04-95 HONG LIM COMPLEX<br />Singapore 051531</div>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="mt-0.5 text-[#B81005] flex-shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-[#DDDDDD] text-[13px] font-medium">Sri Lanka Office</div>
-                    <div className="text-[#B0B0B0] text-[11px] leading-[1.5]">HIRUSH AUTOMATION (PVT) LTD<br />247, MARUTHANKULAM ROAD<br />KOVILPUTHUKKULAM, VAVUNIYA<br />Sri Lanka</div>
-                  </div>
-                </div>
+                ))}
 
                 <div className="flex items-start gap-3">
                   <div className="mt-0.5 text-[#B81005] flex-shrink-0">
@@ -88,8 +87,13 @@ export default function ContactSection() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-[#DDDDDD] text-[13px]">Singapore: (+65) 8183 0763</div>
-                    <div className="text-[#DDDDDD] text-[13px]">Sri Lanka: (+94) 7660 99261</div>
+                    {offices.map((office) =>
+                      office.phones.map((phone) => (
+                        <div key={`${office.id}-${phone}`} className="text-[#DDDDDD] text-[13px]">
+                          {office.country}: {phone}
+                        </div>
+                      ))
+                    )}
                   </div>
                 </div>
 
@@ -100,7 +104,7 @@ export default function ContactSection() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-[#DDDDDD] text-[13px]">admin@hirushautomation.com</div>
+                    <div className="text-[#DDDDDD] text-[13px]">{site.email}</div>
                   </div>
                 </div>
 
@@ -111,7 +115,7 @@ export default function ContactSection() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-[#DDDDDD] text-[13px]">www.hirushautomation.com</div>
+                    <div className="text-[#DDDDDD] text-[13px]">{site.domain}</div>
                   </div>
                 </div>
               </div>

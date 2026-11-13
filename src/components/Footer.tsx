@@ -1,38 +1,6 @@
 'use client';
 import React from 'react';
-
-
-interface FooterColumn {
-  title: string;
-  items: string[];
-}
-
-const footerColumns: FooterColumn[] = [
-  {
-    title: 'SERVICES',
-    items: [
-      'PLC Programming',
-      'HMI/SCADA Design',
-      'Electrical & Control Panel',
-      'Controller Design',
-      'Online Training',
-    ],
-  },
-  {
-    title: 'DESIGN TOOLS',
-    items: ['AutoCAD', 'ePlan Electric', 'PanelDraw', 'PSCAD'],
-  },
-  {
-    title: 'PLC PLATFORMS',
-    items: [
-      'Siemens | Mitsubishi',
-      'Schneider | Allen Bradley',
-      'Omron | Keyence',
-      'Panasonic | Nais',
-      'Direct Logic | GE',
-    ],
-  },
-];
+import { footer, site } from '@/data/site';
 
 export default function Footer() {
   return (
@@ -44,23 +12,16 @@ export default function Footer() {
         fontSize: '12px',
       }}
     >
-      <div
-        className="w-[92%] max-w-[1720px] mx-auto"
-      >
+      <div className="w-[92%] max-w-[1720px] mx-auto">
         {/* Company Description */}
         <div className="py-6 border-b border-gray-700">
-          <p className="text-[#CCCCCC] text-[13px] leading-[1.6] max-w-2xl">
-            Hirush Automation Pte Ltd provides expert electrical, control, and automation engineering solutions. We specialize in PLC/HMI/SCADA systems, control panel design and fabrication, customized controller development, and professional training. With offices in Singapore and Sri Lanka, we serve industries including water treatment, data centers, ACMV, and manufacturing.
-          </p>
+          <p className="text-[#CCCCCC] text-[13px] leading-[1.6] max-w-2xl">{footer.description}</p>
         </div>
 
         {/* Footer widgets - grid layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-8 border-b border-gray-700">
-          {footerColumns.map((col) => (
-            <div
-              key={col.title}
-              className="w-full"
-            >
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 py-8 border-b border-gray-700">
+          {footer.columns.map((col) => (
+            <div key={col.title} className="w-full">
               <h3
                 className="font-coda text-[20px] font-normal pb-[5px] uppercase"
                 style={{
@@ -87,7 +48,8 @@ export default function Footer() {
                       borderBottom: '1px dotted #111111',
                       borderTop: '1px dotted #555555',
                       listStyle: 'none',
-                      backgroundImage: 'url("data:image/gif;base64,R0lGODlhBgAGAIABAIgQBf///yH5BAEAAAEALAAAAAAGAAYAAAIJhI+py+0PYysAOw==")',
+                      backgroundImage:
+                        'url("data:image/gif;base64,R0lGODlhBgAGAIABAIgQBf///yH5BAEAAAEALAAAAAAGAAYAAAIJhI+py+0PYysAOw==")',
                       backgroundRepeat: 'no-repeat',
                       backgroundPosition: '0px 7px',
                     }}
@@ -110,7 +72,7 @@ export default function Footer() {
             margin: '0',
           }}
         >
-          Copyright&copy;&nbsp;&nbsp;Hirush Automation Pte Ltd&nbsp;| All Rights Reserved
+          Copyright&copy;&nbsp;&nbsp;{site.legalName}&nbsp;| All Rights Reserved
         </div>
       </div>
     </footer>
