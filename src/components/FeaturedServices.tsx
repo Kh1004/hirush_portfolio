@@ -5,7 +5,7 @@ import { serviceIcons } from '@/components/icons/serviceIcons';
 
 export default function FeaturedServices() {
   return (
-    <section className="bg-white w-full py-12 md:py-16 lg:py-24">
+    <section id="services" className="bg-white w-full py-12 md:py-16 lg:py-24 scroll-mt-32">
       {/* Heading */}
       <AnimateOnScroll>
         <div className="w-[92%] max-w-[1720px] mx-auto">

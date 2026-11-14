@@ -4,7 +4,6 @@ import HeroSlider from '@/components/HeroSlider';
 import AboutSection from '@/components/AboutSection';
 import MissionVision from '@/components/MissionVision';
 import FeaturedServices from '@/components/FeaturedServices';
-import ServicesSection from '@/components/ServicesSection';
 import ToolsSection from '@/components/ToolsSection';
 import ProductsSection from '@/components/ProductsSection';
 import ProjectsSection from '@/components/ProjectsSection';
@@ -28,11 +27,8 @@ export default function HomePage() {
       {/* Mission & Vision */}
       <MissionVision />
 
-      {/* Featured Services - 5 column boxes */}
+      {/* Services - 5 column boxes */}
       <FeaturedServices />
-
-      {/* Detailed Services */}
-      <ServicesSection />
 
       {/* Tools */}
       <ToolsSection />
